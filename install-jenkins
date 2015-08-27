@@ -14,18 +14,8 @@ sudo apt-get -y -qq install jenkins
 sudo cp iptables /etc/iptables
 sudo cp rc.local /etc/rc.local
 
-
-#And then stop and start jenkins-master
-
-#The question is - how should I document this:
-
-#* Add a slide in one of the decks
-#* Add optional instructions
-#* Create a separate "emergency fix" sheet to hand out to students
-
-#What do you think is best?
-
-#Randy
+# Now apply the iptables rules
+sudo /etc/iptables
 
 
 
