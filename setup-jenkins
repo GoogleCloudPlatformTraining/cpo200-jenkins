@@ -7,6 +7,7 @@
 
 cd
 
+curl http://127.0.0.1:8080 > temp.txt
 
 
 wget -qO jenkins-cli.jar http://127.0.0.1:8080/jnlpJars/jenkins-cli.jar
