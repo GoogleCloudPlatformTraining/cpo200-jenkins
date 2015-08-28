@@ -15,16 +15,14 @@ UPDATE_LIST=$( java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ list-plugins 
 if [ ! -z "${UPDATE_LIST}" ]; then
     echo Updating Jenkins Plugins: ${UPDATE_LIST};
     java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ install-plugin ${UPDATE_LIST};
-    java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ safe-restart;
+#    java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ safe-restart;
 fi
+
+sleep 10
 
 echo "Installing required plugins"
 java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ install-plugin git
-sleep 10
 java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ install-plugin google-storage-plugin
-sleep 10
 java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ install-plugin google-source-plugin
-sleep 10
 java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ install-plugin swarm -restart
 
-#java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ restart
