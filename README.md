@@ -1,2 +1,2 @@
 # cpo200-jenkins
-Contains configuration and scripts to set up a Jenkins CI server
+Used in the CPO200 course - Contains configuration and scripts to set up a Jenkins CI server
