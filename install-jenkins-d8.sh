@@ -1,0 +1,25 @@
+# File: install-jenkins-d8.sh
+#
+# Purpose: Install Jenkins CI server
+
+
+wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | sudo apt-key add -
+
+sudo echo "deb http://pkg.jenkins-ci.org/debian-stable binary/" | sudo tee -a /etc/apt/sources.list.d/jenkins.list
+
+sudo apt-get -qq update
+
+sudo apt-get -y -qq install jenkins
+
+# sudo cp iptables /etc/iptables
+# sudo cp rc.local /etc/rc.local
+
+# Now apply the iptables rules
+# sudo /etc/iptables
+
+cd
+
+echo "Wait 30 seconds for Jenkins CI to fully start"
+sleep 30
+
+wget -qO jenkins-cli.jar http://127.0.0.1:8080/jnlpJars/jenkins-cli.jar
