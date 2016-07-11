@@ -11,11 +11,11 @@ sudo apt-get -qq update
 
 sudo apt-get -y -qq install jenkins
 
-# sudo cp iptables /etc/iptables
-# sudo cp rc.local /etc/rc.local
+sudo cp iptables /etc/iptables
+sudo cp rc.local /etc/rc.local
 
 # Now apply the iptables rules
-# sudo /etc/iptables
+sudo /etc/iptables
 
 cd
 
